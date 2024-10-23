@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-05 07:53+0000\n"
+"PO-Revision-Date: 2024-11-05 07:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,4 +23,15 @@ msgstr ""
 #. module: mrp_subcontracting_skip_no_negative
 #: model:ir.model,name:mrp_subcontracting_skip_no_negative.model_stock_picking
 msgid "Transfer"
+msgstr ""
+
+#. module: mrp_subcontracting_skip_no_negative
+#. odoo-python
+#: code:addons/mrp_subcontracting_skip_no_negative/models/stock_move.py:0
+#, python-format
+msgid ""
+"You cannot validate this stock operation because the stock level of the "
+"component product '{name}' would become negative ({qty}) on the stock "
+"location '{location}' and negative stock is not allowed for this product "
+"and/or location."
 msgstr ""
