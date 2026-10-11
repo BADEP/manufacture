@@ -27,9 +27,11 @@ class StockWarehouseOrderpoint(models.Model):
         """Bills of materials that can be used to manufacture this product."""
         self.ensure_one()
         return self.product_id.bom_ids.filtered(
-            lambda x: x.type == "normal"
-            and (not x.product_id or x.product_id == self.product_id)
-            and (not x.company_id or x.company_id == self.company_id)
+            lambda x: (
+                x.type == "normal"
+                and (not x.product_id or x.product_id == self.product_id)
+                and (not x.company_id or x.company_id == self.company_id)
+            )
         )
 
     def action_replenish(self, force_to_max=False):
