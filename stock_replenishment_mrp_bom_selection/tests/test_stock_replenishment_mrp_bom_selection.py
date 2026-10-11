@@ -20,10 +20,11 @@ class TestStockReplenishmentMrpBomSelection(TransactionCase):
 
     @classmethod
     def _create_product_template(cls, name):
-        product_form = Form(cls.env["product.template"])
-        product_form.name = name
-        product_form.is_storable = True
-        return product_form.save()
+        # The is_storable toggle is hidden from the form when lots are enabled
+        # (store_by is shown instead), so create the product directly.
+        return cls.env["product.template"].create(
+            {"name": name, "type": "consu", "is_storable": True}
+        )
 
     @classmethod
     def _create_mrp_bom(cls, component1, component2):

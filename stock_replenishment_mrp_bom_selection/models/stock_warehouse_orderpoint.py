@@ -34,14 +34,12 @@ class StockWarehouseOrderpoint(models.Model):
             )
         )
 
-    def action_replenish(self, force_to_max=False):
+    def action_replenish(self):
         if len(self) == 1 and self._needs_bom_selection_wizard():
-            if force_to_max:
-                # Same behavior as the core "Order To Max" entry, but letting
-                # the user split that quantity among the different BoMs.
-                self.qty_to_order = self._get_multiple_rounded_qty(
-                    self.product_max_qty - self.qty_forecast
-                )
+            # Same quantity as the core "Order" button (manual quantity or, if
+            # none, the quantity to reach the max), but letting the user split
+            # it among the different BoMs.
+            self.qty_to_order = self.qty_to_order_manual or self.qty_to_order_to_max
             # The wizard record has to exist beforehand so that the raw material
             # availability button can navigate back to it.
             replenish_wizard = self.env[
@@ -56,4 +54,4 @@ class StockWarehouseOrderpoint(models.Model):
                 "target": "new",
                 "context": {"default_orderpoint_id": self.id},
             }
-        return super().action_replenish(force_to_max=force_to_max)
+        return super().action_replenish()
