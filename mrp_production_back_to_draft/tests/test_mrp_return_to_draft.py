@@ -10,6 +10,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 @tagged("post_install", "-at_install")
 class TestMrpProductionAutovalidate(BaseCommon):
+    _test_user_groups = None
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -43,7 +45,7 @@ class TestMrpProductionAutovalidate(BaseCommon):
             {
                 "product_id": cls.prod_tp1.id,
                 "product_tmpl_id": cls.prod_tp1.product_tmpl_id.id,
-                "product_uom_id": cls.prod_tp1.uom_id.id,
+                "uom_id": cls.prod_tp1.uom_id.id,
                 "product_qty": 1.0,
                 "type": "normal",
             }
@@ -59,7 +61,7 @@ class TestMrpProductionAutovalidate(BaseCommon):
             {
                 "name": "MO ABC",
                 "product_id": cls.prod_tp1.id,
-                "product_uom_id": cls.prod_tp1.uom_id.id,
+                "uom_id": cls.prod_tp1.uom_id.id,
                 "product_qty": 2,
                 "bom_id": cls.test_bom_1.id,
             }
@@ -72,7 +74,6 @@ class TestMrpProductionAutovalidate(BaseCommon):
         cls.test_workorder_1 = cls.env["mrp.workorder"].create(
             {
                 "name": "Workorder Test",
-                "product_uom_id": cls.prod_tp1.uom_id.id,
                 "production_id": cls.mo_1.id,
                 "workcenter_id": cls.workcenter_id.id,
                 "qty_remaining": 1,
@@ -115,7 +116,7 @@ class TestMrpProductionAutovalidate(BaseCommon):
             {
                 "product_id": self.prod_tp1.id,
                 "product_tmpl_id": self.prod_tp1.product_tmpl_id.id,
-                "product_uom_id": self.prod_tp1.uom_id.id,
+                "uom_id": self.prod_tp1.uom_id.id,
                 "product_qty": 1.0,
                 "type": "normal",
             }
@@ -124,7 +125,7 @@ class TestMrpProductionAutovalidate(BaseCommon):
             {
                 "name": "MO ABCD",
                 "product_id": self.prod_tp1.id,
-                "product_uom_id": self.prod_tp1.uom_id.id,
+                "uom_id": self.prod_tp1.uom_id.id,
                 "product_qty": 2,
                 "bom_id": self.test_bom_2.id,
             }

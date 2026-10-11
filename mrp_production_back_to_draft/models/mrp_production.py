@@ -30,7 +30,7 @@ class MrpProduction(models.Model):
 
     @api.depends("move_raw_ids.state", "move_finished_ids.state")
     def _compute_state(self):
-        super()._compute_state()
+        res = super()._compute_state()
         for production in self:
             if (
                 production.state == "cancel"
@@ -43,3 +43,4 @@ class MrpProduction(models.Model):
                 and all(m.state == "draft" for m in production.move_finished_ids)
             ):
                 production.state = "draft"
+        return res
