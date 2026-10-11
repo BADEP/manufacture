@@ -36,13 +36,10 @@ class MrpProduction(models.Model):
                 production.state == "cancel"
                 and all(m.state == "draft" for m in production.move_raw_ids)
                 and all(m.state == "draft" for m in production.move_finished_ids)
-            ):
-                production.state = "draft"
-            elif (
+            ) or (
                 production.state == "confirmed"
                 and not production.move_raw_ids
                 and production.move_finished_ids
                 and all(m.state == "draft" for m in production.move_finished_ids)
             ):
                 production.state = "draft"
-        return
