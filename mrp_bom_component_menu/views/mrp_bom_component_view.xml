@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2017-2024 ForgeFlow
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
@@ -60,8 +60,8 @@
         </field>
     </record>
     <menuitem
-        action="mrp_bom_form_action2"
         id="menu_mrp_bom_form_action2"
+        action="mrp_bom_form_action2"
         parent="mrp.menu_mrp_bom"
         sequence="14"
     />
