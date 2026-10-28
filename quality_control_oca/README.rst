@@ -21,13 +21,13 @@ Quality Control OCA
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fmanufacture-lightgray.png?logo=github
-    :target: https://github.com/OCA/manufacture/tree/19.0/quality_control_oca
+    :target: https://github.com/OCA/manufacture/tree/20.0/quality_control_oca
     :alt: OCA/manufacture
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/manufacture-19-0/manufacture-19-0-quality_control_oca
+    :target: https://translation.odoo-community.org/projects/manufacture-20-0/manufacture-20-0-quality_control_oca
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/manufacture&target_branch=19.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/manufacture&target_branch=20.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -44,12 +44,12 @@ production lots or any other area of the company.
 Configuration
 =============
 
-- Question: The thing to be checked. We have two types of questions:
-- Qualitative: The result is a description, color, yes, no...
-- Quantitative: The result must be within a range.
-- Possible values: The values chosen in qualitative questions.
-- Test: The set of questions to be used in inspections.
-- Once these values are set, we define the inspection.
+-  Question: The thing to be checked. We have two types of questions:
+-  Qualitative: The result is a description, color, yes, no...
+-  Quantitative: The result must be within a range.
+-  Possible values: The values chosen in qualitative questions.
+-  Test: The set of questions to be used in inspections.
+-  Once these values are set, we define the inspection.
 
 We have a *generic* test that can be applied to any model: shipments,
 invoices or product, or a *test related*, making it specific to a
@@ -70,7 +70,7 @@ The complete inspection workflow is:
 Known issues / Roadmap
 ======================
 
-- Make translatable the trigger name.
+-  Make translatable the trigger name.
 
 Bug Tracker
 ===========
@@ -78,7 +78,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/manufacture/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/manufacture/issues/new?body=module:%20quality_control_oca%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/manufacture/issues/new?body=module:%20quality_control_oca%0Aversion:%2020.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -94,35 +94,35 @@ Authors
 Contributors
 ------------
 
-- Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
-- Ana Juaristi <anajuaristi@avanzosc.es>
-- Lois Rilo <lois.rilo@forgeflow.com>
-- Simone Rubino <simone.rubino@agilebg.com>
-- Juan Humanes <juan.humanes@guadaltech.es>
-- Ignacio José Alés López <ignacio.ales@guadaltech.es>
-- Pimolnat Suntian <pimolnats@ecosoft.co.th>
-- `Tecnativa <https://www.tecnativa.com>`__:
+-  Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
+-  Ana Juaristi <anajuaristi@avanzosc.es>
+-  Lois Rilo <lois.rilo@forgeflow.com>
+-  Simone Rubino <simone.rubino@agilebg.com>
+-  Juan Humanes <juan.humanes@guadaltech.es>
+-  Ignacio José Alés López <ignacio.ales@guadaltech.es>
+-  Pimolnat Suntian <pimolnats@ecosoft.co.th>
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  - Pedro M. Baeza
-  - Carlos Roca
+   -  Pedro M. Baeza
+   -  Carlos Roca
 
-- `Trey Kilobytes de Soluciones SL <https://www.trey.es>`__:
+-  `Trey Kilobytes de Soluciones SL <https://www.trey.es>`__:
 
-  - Vicent Cubells
+   -  Vicent Cubells
 
-- `APSL-Nagarro <https://www.apsl.tech>`__:
+-  `APSL-Nagarro <https://www.apsl.tech>`__:
 
-  - Antoni Marroig <amarroig@apsl.net>
+   -  Antoni Marroig <amarroig@apsl.net>
 
-- `Serpent Consulting Services Pvt. Ltd. <https://www.serpentcs.com>`__
-- `@Hotdgo9 <https://github.com/Hotdgo9>`__
+-  `Serpent Consulting Services Pvt. Ltd. <https://www.serpentcs.com>`__
+-  `@Hotdgo9 <https://github.com/Hotdgo9>`__
 
 Other credits
 -------------
 
-- Originally based on the old
-  `nan_quality_control <https://github.com/NaN-tic/nan_quality_control>`__
-  modules from NaN·tic.
+-  Originally based on the old
+   `nan_quality_control <https://github.com/NaN-tic/nan_quality_control>`__
+   modules from NaN·tic.
 
 Maintainers
 -----------
@@ -137,6 +137,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/manufacture <https://github.com/OCA/manufacture/tree/19.0/quality_control_oca>`_ project on GitHub.
+This module is part of the `OCA/manufacture <https://github.com/OCA/manufacture/tree/20.0/quality_control_oca>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
