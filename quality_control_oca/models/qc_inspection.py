@@ -4,7 +4,6 @@
 # Copyright 2017 ForgeFlow S.L.
 # Copyright 2017 Simone Rubino - Agile Business Group
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-from typing import ClassVar
 
 from odoo import api, exceptions, fields, models
 from odoo.tools import formatLang
@@ -13,7 +12,7 @@ from odoo.tools import formatLang
 class QcInspection(models.Model):
     _name = "qc.inspection"
     _description = "Quality control inspection"
-    _inherit: ClassVar[list[str]] = ["mail.thread", "mail.activity.mixin"]
+    _inherit = ["mail.thread", "mail.activity.mixin"]  # noqa: RUF012
 
     @api.depends("inspection_lines", "inspection_lines.success")
     def _compute_success(self):
